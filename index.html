@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/all.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+    
+    <title>Retin Scan</title>
+</head>
+<body>
+
+    <!-- section Retin Scan -->
+    <section class="sec1">
+        <div class="container box-cont">
+
+            <!--Content description for the feature -->
+            <div class="content text-center">
+                <div class="cont-words">
+                    <h1 class="title-larg">Submit your Retina Scan</h1>
+                    <p class="title-s"> Upload jpg or png Format.</p>
+                </div>
+
+                <div class=" photo-box">
+                    <div class="the-feature ">
+                        <div class="upp  ">
+                            <div class="imagee">
+                                <img  src=" " alt="">
+                            </div>
+                            <div class="content2">
+                                <div class="icon "><i class="fas fa-cloud-upload-alt"></i> </div>
+                                <div class="text-2 ">No File chosen, yet!</div>
+                                <div class="cancel-btn "> <i class=" fas fa-times"> </i></div>
+                                <div class="file-name ">File Name Here</div>
+                            </div>
+                        </div>
+                        <input class="default-btn" type="file" hidden>
+                        <div class="choose-file"><button onclick="defaultBtnActive()" class="custom-btn">Choose a File</button></div>
+                    </div>
+                </div>
+                            <!-- button to upload the rays and then submit it  --> 
+                <form>
+                <div class="buttons">
+                    <div class="text-btn2"><input class="sub-button btn btn-dark"  type="submit"></div>
+                </div>
+            </form>
+
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        const upp =document.querySelector(".upp");
+        const fileName =document.querySelector(".file-name");
+        const cancelBtn =document.querySelector(".cancel-btn");
+        const defaultBtn =document.querySelector(".default-btn"); 
+        const custBtn =document.querySelector(".custom-btn");
+        const img =document.querySelector("img");
+        let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+        function defaultBtnActive(){
+        defaultBtn.click();
+        }
+        defaultBtn.addEventListener("change",function(){
+            const file = this.files[0];
+        if(file){
+            const reader = new FileReader();
+            reader.onload=function(){
+                const result = reader.result;
+                img.src= result;
+                upp.classList.add("active");
+            }
+            cancelBtn.addEventListener("click",function(){
+                img.src =" ";
+                upp.classList.remove("active");
+            });
+            reader.readAsDataURL(file);
+        }
+        if(this.value){
+            let valueStore = this.value.match(regExp);
+            fileName.textContent = valueStore;
+        }
+        });
+    </script>
+        <script src="js/jquery-3.6.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/main.js"></script>
+    
+</body>
+</html>

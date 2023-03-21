@@ -1,0 +1,173 @@
+.body{
+    font-family: var(--bs-body-font-family);
+
+}
+.sec1{
+    background-color: rgb(192, 173, 143);
+    background-position: center center;
+    height: 100vh;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+.box-cont{
+    padding-top: 15px;
+}
+.content{
+    padding-bottom: 20px;
+    padding-top: 40px;
+    background-color: beige;
+    border-width: 20px ;
+    border-color: white;
+    border-style: solid;
+    margin-left:100px ;
+    margin-right:100px ;
+
+}
+.title-larg{
+    font-size: 50px;
+}
+
+.upp{
+    position: relative;
+    background-color: white;
+    padding: 90px;
+    margin: 0 300;
+    border-radius: 10px;
+    border: 2px dashed rgb(184, 184, 184);
+    display: grid;
+    justify-content: center;
+    overflow: hidden;
+}
+.upp.active{
+    border: none;
+
+}
+
+.upp .imagee {
+    position: absolute;
+    height: 100%;
+    width: 100% ;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+
+}
+.upp .imagee img{
+    height: 100%;
+    width: 100% ;
+    object-fit: cover;
+}
+.content2 .icon{
+    font-size: 100px;
+    color: #9658fe;
+}
+.content2 .text-2{
+    font-size: 20px;
+    font-weight: 500;
+    color: #5b5b7b;
+}
+.content2 .cancel-btn{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #9658fe;
+    display: none;
+}
+.upp.active:hover .cancel-btn{
+    display: block;
+}
+.upp .cancel-btn:hover{
+    color: #e74c3c;
+}
+.content2 .file-name{
+    position: absolute;
+    bottom: 0px;
+    background: linear-gradient(135deg,#3a8ffe 0% ,#9658fe 100%);
+    width: 100%;
+    color: white;
+    padding: 8px 0;
+    font-size: 18px;    
+    left: 1;
+    display: none;
+}
+.upp.active:hover .file-name{
+    display: block;
+}
+.custom-btn{
+    margin-top:30px ;
+    width:60% ;
+    height:50px ;
+    display: block ;
+    border: none;
+    border-radius:25px ;
+    color:white ;
+    font-size:18px ;
+    font-weight:500 ;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    background: linear-gradient(135deg,#3a8ffe 0% ,#9658fe 100%);
+}
+.choose-file{
+    padding-left: 300px;
+
+}
+.buttons{
+    padding-top: 20px;
+
+}
+.btn{
+    width:30% ;
+    height:50px ;
+    border: none;
+    border-radius:25px ;
+    color:rgb(134, 125, 226) ;
+    font-size:18px ;
+    font-weight:500 ;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    background: rgb(255, 255, 255);
+    box-shadow:-1px 5px 11px 0px rgb(42 42 42 / 35%);
+}
+
+/* 
+.upl-button{
+    display: none;
+
+    display: inline-block;
+    text-transform: uppercase;
+    background: white;
+    text-align: center;
+    padding: 15px 40px ;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 5px 15px 25px rgba(0 , 0 , 0, 0.35);
+    border-radius: 3px;
+
+
+}
+
+label i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+label:active{
+    transform: scale(0.9);
+}
+.text-btn2{
+padding-top: 60px;
+}
+.sub-button{
+    border-radius: 3px !important;
+    width: 150px;
+    height: 50px; 
+
+
+} */
